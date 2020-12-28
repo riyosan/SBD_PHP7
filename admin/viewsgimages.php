@@ -93,7 +93,7 @@ while ($row = $rs_result -> fetch_assoc()) {
 <?php
 $sql = "SELECT COUNT(aid) FROM tbl_gallery where aid='$asid' AND status='process'";
 $rs_result = $con-> query ($sql);
-$row = $rs_result -> fetch_assoc();
+$row = $rs_result -> fetch_row();
 $total_records = $row[0];
 $total_pages = ceil($total_records / 20);
 for ($i=1; $i<=$total_pages; $i++) {

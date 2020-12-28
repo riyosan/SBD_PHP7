@@ -40,7 +40,7 @@ if(isset($_FILES['upload1'])){
 		$file_tmp =$_FILES['upload1']['tmp_name'][$key];
 		$file_type=$_FILES['upload1']['type'][$key];	
 		
-        if($file_size > 2097152){
+        if($file_size > 10097152){
 			$errors[]='File size must be less than 2 MB';
         }	
 		

@@ -66,7 +66,7 @@ $rs_result = $con-> query ($sql);
                                     </thead>
 
 <?php
-while ($row = $rs_result -> fetch_assoc()) {
+while ($row = mysqli_fetch_assoc($rs_result)) {
 ?>
 
 <tbody>
@@ -90,7 +90,7 @@ while ($row = $rs_result -> fetch_assoc()) {
 <?php
 $sql = "SELECT COUNT(name) FROM tbl_album";
 $rs_result = $con-> query ($sql);
-$row = $rs_result -> fetch_assoc();
+$row = mysqli_fetch_row($rs_result);
 $total_records = $row[0];
 $total_pages = ceil($total_records / 20);
 for ($i=1; $i<=$total_pages; $i++) {
