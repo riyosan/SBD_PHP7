@@ -33,6 +33,7 @@ $status='process';
 include"connect.php";
 $rd=rand();
 if(isset($_FILES['upload1'])){
+    $gdesc = $_POST['gdesc'];
     $errors= array();
 	foreach($_FILES['upload1']['tmp_name'] as $key => $tmp_name){
 		$file_name = $key.$rd.$_FILES['upload1']['name'][$key];
@@ -66,7 +67,7 @@ move_uploaded_file($file_tmp,"$desired_dir/".$file_name);
                 $new_dir="$desired_dir/".$file_name.time();
                  rename($file_tmp,$new_dir) ;				
             }
-			  $query="INSERT into tbl_gallery(`gid`,`aid`,`gname`,`gimages`,`date`,`status`) VALUES('','$gid','$gname','$file_name','$gdate','$status')";
+			  $query="INSERT into tbl_gallery(`gid`,`aid`,`gname`,`gdesc`,`gimages`,`date`,`status`) VALUES('','$gid','$gname','$gdesc','$file_name','$gdate','$status')";
 		 mysqli_query($con,$query);			
         }
 		else
@@ -77,7 +78,7 @@ move_uploaded_file($file_tmp,"$desired_dir/".$file_name);
         }
     }
 	if(empty($errors)){
-	echo " <div class='alert alert-success'>Your Photos Is Successfully Uploded. <a href='viewphotos.php'>View Photos</a> |<a href='addevent.php'> Add new Photos</a></div>";
+	echo " <div class='alert alert-success'>Your Photos Is Successfully Uploded. <a href='viewsgallery.php'>View Photos</a> |<a href='addevent.php'> Add new Photos</a></div>";
 	
 	}
 }
@@ -102,6 +103,12 @@ move_uploaded_file($file_tmp,"$desired_dir/".$file_name);
                                 <div class="col-lg-6">
                                     <form action="#" method="post" enctype="multipart/form-data" name="upload">
                                        
+                                    <div class="form-group">
+                                            <label>Gallery Name or Title</label>
+                                            <input class="form-control" placeholder="Enter Title" name="gdesc">
+                                                <p class="help-block">Example "Sunset pics"</p>
+                                        
+                                        </div>
                                         
                                         <div class="form-group">
                                             <label>Gallery Image</label>

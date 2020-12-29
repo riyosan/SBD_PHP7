@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>DotCode - Gallery</title>
+<title>Goole Art & Culture Mod</title>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- jQuery (Bootstrap's JavaScript plugins) -->
 <script src="js/jquery.min.js"></script>
@@ -42,16 +42,12 @@
 <div class="header">
 	 <div class="container">
 		 <div class="logo">
-			 <a href="gallery.php"><h2>&lt;DOTCODE&gt;</h2></a>
+			 <a href="index.php"><h2>&lt;Goole Art & Culture Mod&gt;</h2></a>
 		 </div>
 		 <div class="top-menu">
 				<span class="menu"> </span>
 				<ul>
-					 <li><a href="#.html">HOME</a></li>
-					 <li><a href="#.html">ABOUT US</a></li>
-					 <li class="active"><a href="index.php">GALLERY</a></li>					
-					 <li><a href="#.html">BLOG</a></li>					 
-					 <li><a href="#.html">CONTACT</a></li>
+					 <li class="active"><a href="index.php">GALLERY</a></li>
                      <li>|</li>		
                      <li><a href="admin/login.php">Admin panel</a></li>			 
 				 </ul>
@@ -68,11 +64,7 @@
 </div>
 <!--header-->
 <div class="gallery-head">
-	 <div class="gallery-info">
-		 <div class="container">
-			 <a href="gallery.php">Home/</a><h2>Gallery</h2>			 
-		 </div>		 
-	 </div>
+	 
 	 <div class="gallery-text">
 		 
 	 </div>

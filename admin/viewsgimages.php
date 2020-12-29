@@ -74,11 +74,12 @@ while ($row = $rs_result -> fetch_assoc()) {
 
 <tbody>
                                         <tr>
-                                            <td><?php echo $row["gimages"]; ?></td>
+                                            <td><?php echo $row["gdesc"]; ?></td>
                                                                                         
                                            
                                             <td><a href='gchangeimage.php?key0=<?php echo  $row["gid"];?>&asid2=<?php echo $row["aid"]; ?>'><img src="gcatch/<?php echo $row["gimages"]; ?>"  width="100px"/></a></td>
                                            <td><a href='gallerydelete.php?key1=<?php echo $row["gid"]; ?> && key2=<?php echo $row["aid"]; ?>'>Delete</a> 
+                                           <td><a href='galleryedit.php?key0=<?php echo $row["gid"]; ?> && key1=<?php echo $row["aid"]; ?> && key2=<?php echo $row["gdesc"]; ?>'>Edit</a>
 										   
                                         </tr>
 										
