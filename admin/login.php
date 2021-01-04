@@ -11,7 +11,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
 
-    <title>Dotcode-Gallery | Admin Login</title>
+    <title>Goole Art&Culture Mod | Admin Login</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
